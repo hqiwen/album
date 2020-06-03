@@ -1,2 +1,22 @@
 <!--compontent/photoEdit/photoEdit.wxml-->
-<text>compontent/photoEdit/photoEdit.wxml</text>
+
+<div class='photoContainer'>
+    
+    <div bindtouchstart='touchStart' bindtouchend="touchEnd">
+      <div class='imageCover'>
+          <image style="width:{{width}};height:{{height}}" mode="{{mode}}" src="{{photo.src}}"></image>
+      </div>
+    </div>
+    <div class='bottom'>
+
+        <icon bindtap="share" class='iconfont icon-icon-test' />
+        <view wx:if="{{photo.like}}"> 
+          <icon bindtap="toggleLike" class='iconfont icon-aixin1' />
+        </view>
+        <view wx:else>
+          <icon bindtap="toggleLike" class='iconfont icon-aixin' />
+        </view>
+        <icon bindtap="removePhoto" class='iconfont icon-shanchu' />
+        
+    </div>
+</div>

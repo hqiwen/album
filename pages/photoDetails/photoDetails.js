@@ -2,10 +2,6 @@
 const { findPhoto, findNextPhoto } = require('../../utils/util.js')
 
 Page({
-  startX : '',
-  startY : '',
-  endX : '',
-  endY : '',
   monthArray: [],
   monthIndex: 0,
   index: 0,
@@ -14,21 +10,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mode: 'scaleToFill',
     isShowSharePhoto: false,
-    postUrl: '',
     photo: '',
   },
 
-  touchStart(e) {
-    this.startX = e.changedTouches[0].clientX
-    this.startY = e.changedTouches[0].clientY
-  },
-
-  touchEnd(e) {
-    this.endX = e.changedTouches[0].clientX;
-    this.endY = e.changedTouches[0].clientY;
-    let turn = this.getTouchData(this.endX, this.endY, this.startX, this.startY)
+  finishedTouch(e) {
+    let turn = e.detail.turn
     let { photo, newMonthIndex, newIndex } = findNextPhoto(this.monthArray, this.monthIndex, this.index, turn)
     this.monthIndex = newMonthIndex
     this.index = newIndex;
@@ -39,16 +26,6 @@ Page({
       title: (this.monthIndex + 1).toString(),
     })
     console.log(this.monthIndex, this.index)
-  },
-
-  getTouchData(endX, endY, startX, startY) {
-    let turn = "";
-    if (endX - startX > 50 && Math.abs(endY - startY) < 50) {      //右滑
-      turn = "right";
-    } else if (endX - startX < -50 && Math.abs(endY - startY) < 50) {   //左滑
-      turn = "left";
-    }
-    return turn;
   },
 
   toggleLike() {
