@@ -1,0 +1,22 @@
+/* pages/monthPhotos/monthPhotos.wxss */
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0;
+}
+
+.showTitle {
+  margin: 10rpx;
+}
+
+.showPhoto {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:;
+}
+
+.showPhoto image {
+  display: inline-block;
+}

@@ -1,0 +1,40 @@
+/* pages/photos/photo.wxss */
+page {
+  height: 100%
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0;
+}
+
+.showTitle {
+  font-size: 40rpx;
+  margin: 10rpx;
+}
+
+.showPhoto {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.showPhoto image {
+  display: inline-block;
+}
+
+.bar {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 40rpx;
+}
+
+.bar div {
+  flex: 1;
+  border: 2rpx solid black;
+  padding: 20rpx;
+}

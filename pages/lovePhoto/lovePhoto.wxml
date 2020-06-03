@@ -1,0 +1,8 @@
+<!--pages/lovePhoto/lovePhoto.wxml-->
+
+<div class="showPhoto">
+  <div wx:for="{{photos}}" wx:for-item="item" wx:key="index">
+  <image style="width:{{width}};height:{{height}}" mode="{{mode}}" src="{{item.src}}"></image>
+  </div>
+</div>
+  

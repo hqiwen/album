@@ -1,0 +1,21 @@
+<!--pages/monthPhotos/monthPhotos.wxml-->
+
+<div class="photoContianer">
+  <view wx:if="{{monthArray}}"> 
+    <div class="imageCard" wx:for="{{monthArray}}" wx:for-item="monthItem" wx:key="month">
+      <div class="showTitle">
+        <text>{{monthItem.month}}</text>
+      </div>
+      <div class="showPhoto">
+        <div wx:for="{{monthItem.photos}}" wx:for-item="item" wx:key="index">
+         <image bindtap="bindClickhander" data-month="{{monthItem.month}}" data-index="{{index}}" style="width:{{width}};height:{{height}}" mode="{{mode}}" src="{{item.src}}"></image>
+        </div>
+      </div>
+    </div>
+  </view>
+  <view wx:else>
+    <div>
+        <text>当前没有图片要处理</text>
+    </div>
+  </view>
+</div>

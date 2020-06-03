@@ -1,0 +1,17 @@
+<!--compontent/popup.wxml-->
+<view wx:if="{{isShow}}" class="mask">
+  <view class="popup">
+    <view class='title'>
+      <text>{{title}}</text>
+    </view>
+
+    <view class='content'>
+      <text>{{content}}</text>
+    </view>
+    
+    <view class='btn'>
+      <button type="primary" bindtap="confirm">conform</button>
+      <button bindtap="exit">exit</button>
+    </view>
+  </view>
+</view>

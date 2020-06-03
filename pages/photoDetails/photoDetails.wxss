@@ -1,0 +1,45 @@
+/* pages/photoDetails/photoDetails.wxss */
+page{
+  height: 100%;
+}
+
+.imageCover{
+  display: flex;
+  height: 90%;
+}
+
+.imageCover image {
+  margin: auto;
+}
+
+.bottom {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom view {
+  flex: 1;
+  text-align: center;
+}
+
+.bottom icon{
+  flex: 1;
+  text-align: center;
+  font-size: 80rpx;
+}
+
+.canvasContainer{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.canvasContainer canvas{
+  margin: auto;
+  position:initial;
+}

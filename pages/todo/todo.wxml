@@ -1,0 +1,22 @@
+<!--pages/todo/todo.wxml-->
+<view class="container">
+  <view class="title">
+    <h3>todo</h3>
+    <text>total : {{todoList.length}}</text>
+  </view>
+
+  <view wx:for="{{todoList}}" wx:key="index" class="item">
+    <view class="itemText">
+      <text>{{item}}</text>
+    </view>
+    <button class="removeButton" bindtap="removeList" data-indexOfItem="{{index}}">remove</button>
+  </view>
+
+  <view class="addAndClear">
+    <input bindinput="bindKeyInput" placeholder="something" value="{{inputValue}}"></input>
+    <button class="addButton" bindtap="addList" type="primary">add</button>
+    <button bindtap="clearList" type="warn">clear</button>
+  </view>
+
+  <popup id="popup" bindconfirm="confirm" bindexit="exit" title="注意" content="不能输入空值"></popup>
+</view>

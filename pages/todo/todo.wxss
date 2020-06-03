@@ -1,0 +1,38 @@
+/* pages/todo/todo.wxss */
+.container {
+  padding: 0;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rpx 0;
+  width: 70%;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin: 10rpx 0;
+  background: #999;
+}
+
+.removeButton {
+  background: #666
+}
+
+.itemText {
+  width: 80%;
+}
+
+.addAndClear input{
+  margin: 30rpx;
+}
+
+.addButton {
+  margin: 10rpx 0;
+}

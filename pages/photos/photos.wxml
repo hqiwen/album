@@ -1,0 +1,21 @@
+<!--pages/photos/photo.wxml-->
+<div class="photoContianer">
+
+    <div class="imageCard" wx:for="{{yearArray}}" wx:for-item="yearItem" wx:key="index">
+      <div class="showTitle">
+        <text>{{yearItem.year}}</text>
+      </div>
+      <div class="showPhoto">
+        <div wx:for="{{yearItem.month}}" wx:for-item="monthItem" wx:key="index">
+          <div wx:for="{{monthItem.photos}}" wx:for-item="item" wx:key="index">
+          <image bindtap="toMonth" data-year="{{yearItem.year}}" style="width:{{width}};height:{{height}}" mode="{{mode}}" src="{{item.src}}"></image>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div class='bar'>
+  <div bindtap='toHome'>全部</div>
+  <div bindtap='toLove'>喜爱</div>
+</div>
